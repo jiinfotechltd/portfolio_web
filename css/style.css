@@ -1,22 +1,35 @@
+body {
+  font-family: "Poppins", serif;
+}
 
-        body {
-          font-family: "Poppins", serif;
-        }
+.highlight {
+    color: #007bff;
+    font-weight: bold;
+}
 
-        .carousel-caption h1,
-        .carousel-caption h2,
-        .carousel-caption p {
-          animation: fadeIn 1s ease-in-out;
-        }
+.text-ct1{
+    color: #007bff !important;
+}
 
-       .hover-effect:hover {
-            color: rgb(228, 181, 8) !important;
-         }
+.text-ct2{
+    color: #ff8c00 !important;
+}
 
-        .active{
-          color: rgb(235, 191, 29) !important;
-        }
+.carousel-caption h1,
+.carousel-caption h2,
+.carousel-caption p {
+  animation: fadeIn 1s ease-in-out;
+}
 
-        span{
-          font-family: Verdana, Geneva, Tahoma, sans-serif;
-        }
+.hover-effect:hover {
+    color: rgb(228, 181, 8) !important;
+ }
+
+.active{
+  color: rgb(235, 191, 29) !important;
+}
+
+span{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
