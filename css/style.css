@@ -1,0 +1,22 @@
+
+        body {
+          font-family: "Poppins", serif;
+        }
+
+        .carousel-caption h1,
+        .carousel-caption h2,
+        .carousel-caption p {
+          animation: fadeIn 1s ease-in-out;
+        }
+
+       .hover-effect:hover {
+            color: rgb(228, 181, 8) !important;
+         }
+
+        .active{
+          color: rgb(235, 191, 29) !important;
+        }
+
+        span{
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
