@@ -8,54 +8,38 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link href="/css/style.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
 </head>
 <body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="100">
-
-<nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top  ">
-    <div class="container">
-        <a class="navbar-brand mb-5" href="#menu">
-            <img src="/static/asserts/logo.png" alt="Logo" class="h-20 w-25">
+<nav class="fixed top-0 left-0 w-full z-50 pt-10 px-5 py-5">
+    <div class="container mx-auto flex items-center justify-between px-4 h-16">
+        <a href="#menu" class="navbar-brand ">
+            <img src="./static/asserts/logo.png" alt="Logo" class="h-25 w-25"/>
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+        <button class="block md:hidden text-white focus:outline-none" type="button" onclick="document.getElementById('navbarNav').classList.toggle('hidden')">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
         </button>
-        <div class="collapse navbar-collapse mb-5" id="navbarNav ">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item mx-2">
-                    <a class="nav-link fs-5 active" href="#menu">Home</a>
-                </li>
-                <li class="nav-item mx-2">
-                    <a class="nav-link fs-5 text-white hover-effect" href="#about">About</a>
-                </li>
-                <li class="nav-item mx-2">
-                    <a class="nav-link fs-5 text-white hover-effect" href="#service">Service</a>
-                </li>
-                <li class="nav-item mx-2">
-                    <a class="nav-link fs-5 text-white hover-effect" href="#features">Features</a>
-                </li>
-                <li class="nav-item mx-2">
-                    <a class="nav-link fs-5 text-white hover-effect" href="#portfolio">Portfolio</a>
-                </li>
-                <li class="nav-item mx-2">
-                    <a class="nav-link fs-5 text-white hover-effect" href="#contact">Contact</a>
-                </li>
-            </ul>
+        <div id="navbarNav" class="hidden md:flex space-x-6">
+            <a href="#menu" class="text-white text-lg hover-effect active">Home</a>
+            <a href="./Pages/AboutUs.html" class="text-white text-lg text-dark hover-effect">About</a>
+            <a href="#service" class="text-white text-lg hover-effect">Services</a>
+            <a href="#features" class="text-white text-lg hover-effect">Features</a>
+            <a href="#portfolio" class="text-white text-lg hover-effect">Portfolio</a>
+            <a href="#contact" class="text-white text-lg hover-effect">Contact</a>
         </div>
     </div>
 </nav>
-
-
 <section id="slider">
     <div id="homeCarousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active bg-cover bg-center h-100">
-                <img src="/static/asserts/carousel_1.png">
-                <div class="container h-100">
-                    <div class="row h-100">
+                <img src="./static/asserts/carousel_1.png" class="h-100 w-100"/>
+                <div class="container-fluid h-100 p-0">
+                    <div class="row h-100 m-0">
                         <div class="col-md-6 carousel-caption d-flex flex-column align-items-start justify-content-center h-100 text-start">
-                            <h1 class="display-4 text-white">We Are <span class="bold">JI-InfoTech</span></h1>
+                            <h1 class="display-4 text-white">We Are <span>JI-InfoTech</span></h1>
                             <h2 class="text-white">Innovating Your Digital Future.</h2>
                             <p class="text-white">At the intersection of creativity and technology, we craft scalable, secure, and high-performance software solutions that help businesses unlock their full potential and achieve their most ambitious goals.</p>
                         </div>
@@ -63,9 +47,9 @@
                 </div>
             </div>
             <div class="carousel-item ">
-                <img src="/static/asserts/carousel_2.png">
-                <div class="container h-100">
-                    <div class="row h-100">
+                <img src="./static/asserts/carousel_2.png" class="h-100 w-100"/>
+                <div class="container h-100 p-0">
+                    <div class="row h-100 m-0">
                         <div class="col-md-6 carousel-caption d-flex flex-column align-items-start justify-content-center h-100 text-start">
                             <h1 class="display-3 text-white">We Are <span >JI-InfoTech</span></h1>
                             <h2 class="text-white">Where Ideas Meet Innovation.</h2>
@@ -75,9 +59,9 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="/static/asserts/carousel_3.png">
-                <div class="container h-100">
-                    <div class="row h-100">
+                <img src="./static/asserts/carousel_3.png" class="h-100 w-100"/>
+                <div class="container h-100 p-0">
+                    <div class="row h-100 m-0">
                         <div class="col-md-6 carousel-caption d-flex flex-column align-items-start justify-content-center h-100 text-start">
                             <h1 class="display-3 text-white">We Are <span>JI-InfoTech</span></h1>
                             <h2 class="text-white">Transforming Ideas into Digital Solutions.</h2>
@@ -97,6 +81,153 @@
         </button>
     </div>
 </section>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<section id="service" class="py-16 pb-20 pl-6 pr-6">
+    <div class="container">
+        <div class="mx-auto text-center mb-12">
+            <div class="heading">
+                <h2 class="text-3xl font-semibold">OUR SERVI<span class="span-color">CE</span></h2>
+                <div class="border-t-2 border-dark w-24 mx-auto mt-4"></div>
+                <p class="text-lg mt-4"><span class="span-color">D</span>elivering Innovative Software Solutions Tailored to Drive Your Business Success</p>
+            </div>
+        </div>
+        <div class="row grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <div class="service-box wow fadeInUp custom-hover-effect group p-0" data-wow-duration="300ms" data-wow-delay="0ms">
+                <div class="flex flex-col h-auto min-w-full p-5 lg:p-8 border border-gray-300 rounded-2xl items-center relative p-0">
+                    <div class="mr-4 text-4xl text-primary">
+                        <i class="fa fa-line-chart"></i>
+                    </div>
+                    <div class="media-body text-center">
+                        <h5 class="font-semibold text-2xl mb-3 group-hover:mb-1 transition-all group-hover:scale-100 group-hover:translate-y-[-10px] transition-all duration-500 group-hover:text-xl">UI/UX Design</h5>
+                        <p class="description text-center mb-0 max-h-0 group-hover:opacity-100 group-hover:max-h-[100px] transition-all duration-500 ease-in-out overflow-hidden">Backed by some of the biggest names in the industry, Firefox OS is an open platform that fosters greater.</p>
+                    </div>
+                </div>
+                <div class="circle"></div>
+            </div>
+            <div class="service-box wow fadeInUp custom-hover-effect group p-0" data-wow-duration="300ms"
+                 data-wow-delay="0ms">
+                <div class="flex flex-col h-auto min-w-full p-5 lg:p-8 border border-gray-300 rounded-2xl items-center relative">
+                    <div class="mr-4 text-4xl text-primary">
+                        <i class="fa fa-line-chart"></i>
+                    </div>
+                    <div class="media-body text-center">
+                        <h5 class="font-semibold text-2xl mb-3 group-hover:mb-1 transition-all group-hover:scale-100 group-hover:translate-y-[-10px] transition-all duration-500 group-hover:text-xl">
+                            ERP software development</h5>
+                        <p class="description text-center mb-0 max-h-0 group-hover:opacity-100 group-hover:max-h-[100px] transition-all duration-500 ease-in-out overflow-hidden">Backed by some of the biggest names in the industry, Firefox OS is an open platform that fosters greater.</p>
+                    </div>
+                </div>
+                <div class="circle"></div>
+            </div>
+            <div class="service-box wow fadeInUp custom-hover-effect group p-0" data-wow-duration="300ms"
+                 data-wow-delay="0ms">
+                <div class="flex flex-col h-auto min-w-full p-5 lg:p-8 border border-gray-300 rounded-2xl items-center relative">
+                    <div class="mr-4 text-4xl text-primary">
+                        <i class="fa fa-line-chart"></i>
+                    </div>
+                    <div class="media-body text-center">
+                        <h5 class="font-semibold text-2xl mb-3 group-hover:mb-1 transition-all group-hover:scale-100 group-hover:translate-y-[-10px] transition-all duration-500 group-hover:text-xl">
+                            Web Development</h5>
+                        <p class="description text-center mb-0 max-h-0 group-hover:opacity-100 group-hover:max-h-[100px] transition-all duration-500 ease-in-out overflow-hidden">Backed by some of the biggest names in the industry, Firefox OS is an open platform that fosters greater.</p>
+                    </div>
+                </div>
+                <div class="circle"></div>
+            </div>
+            <div class="service-box wow fadeInUp custom-hover-effect group p-0" data-wow-duration="300ms"
+                 data-wow-delay="0ms">
+                <div class="flex flex-col h-auto min-w-full p-5 lg:p-8 border border-gray-300 rounded-2xl items-center relative">
+                    <div class="mr-4 text-4xl text-primary">
+                        <i class="fa fa-line-chart"></i>
+                    </div>
+                    <div class="media-body text-center">
+                        <h5 class="font-semibold text-2xl mb-3 group-hover:mb-1 transition-all group-hover:scale-100 group-hover:translate-y-[-10px] transition-all duration-500 group-hover:text-xl">Android Development</h5>
+                        <p class="description text-center mb-0 max-h-0 group-hover:opacity-100 group-hover:max-h-[100px] transition-all duration-500 ease-in-out overflow-hidden">Backed by some of the biggest names in the industry, Firefox OS is an open platform that fosters greater.</p>
+                    </div>
+                </div>
+                <div class="circle"></div>
+            </div>
+            <div class="service-box wow fadeInUp custom-hover-effect group p-0" data-wow-duration="300ms"
+                 data-wow-delay="0ms">
+                <div class="flex flex-col h-auto min-w-full p-5 lg:p-8 border border-gray-300 rounded-2xl items-center relative">
+                    <div class="mr-4 text-4xl text-primary">
+                        <i class="fa fa-line-chart"></i>
+                    </div>
+                    <div class="media-body text-center">
+                        <h5 class="font-semibold text-2xl mb-3 group-hover:mb-1 transition-all group-hover:scale-100 group-hover:translate-y-[-10px] transition-all duration-500 group-hover:text-xl">React App</h5>
+                        <p class="description text-center mb-0 max-h-0 group-hover:opacity-100 group-hover:max-h-[100px] transition-all duration-500 ease-in-out overflow-hidden">Backed by some of the biggest names in the industry, Firefox OS is an open platform that fosters greater.</p>
+                    </div>
+                </div>
+                <div class="circle"></div>
+            </div>
+            <div class="service-box wow fadeInUp custom-hover-effect group p-0" data-wow-duration="300ms"
+                 data-wow-delay="0ms">
+                <div class="flex flex-col h-auto min-w-full p-5 lg:p-8 border border-gray-300 rounded-2xl items-center relative">
+                    <div class="mr-4 text-4xl text-primary">
+                        <i class="fa fa-line-chart"></i>
+                    </div>
+                    <div class="media-body text-center">
+                        <h5 class="font-semibold text-2xl mb-3 group-hover:mb-1 transition-all group-hover:scale-100 group-hover:translate-y-[-10px] transition-all duration-500 group-hover:text-xl">SEO Design</h5>
+                        <p class="description text-center mb-0 max-h-0 group-hover:opacity-100 group-hover:max-h-[100px] transition-all duration-500 ease-in-out overflow-hidden">Backed by some of the biggest names in the industry, Firefox OS is an open platform that fosters greater.</p>
+                    </div>
+                </div>
+                <div class="circle"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="mx-auto text-center pl-6 pr-6 pb-12">
+    <div class="heading">
+        <h2 class="text-3xl font-semibold"><span class="span-color">We</span> working on</h2>
+        <div class="border-t-2 border-dark w-24 mx-auto mt-4"></div>
+    </div>
+</div>
+<div data-state="active" data-orientation="horizontal" role="tabpanel" aria-labelledby="radix-:ri: -trigger-Front-End" id="radix-:ri:-content-Front-End" tabindex="0"
+     class="mt-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 pb-12 pl-6 pr-6">
+    <div class="container pt-6">
+        <div class="row row-cols-2 row-cols-sm-3 row-cols-lg-6 g-4">
+            <div class="col">
+                <div class="d-flex flex-column align-items-center p-4 bg-slate-100 rounded-sm shadow-md group hover:shadow-lg">
+                    <img alt="HTML5" class="w-12 h-12 mb-4 transition-transform duration-200 group-hover:scale-125 " src="./static/asserts/html.png"/>
+                    <span class="text-center text-gray-700">HTML</span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="d-flex flex-column align-items-center p-4 bg-slate-100 rounded-sm shadow-md group hover:shadow-lg">
+                    <img alt="CSS3" class="w-12 h-12 mb-4 transition-transform duration-200 group-hover:scale-125"
+                         src="./static/asserts/css.png">
+                    <span class="text-center text-gray-700">CSS3</span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="d-flex flex-column align-items-center p-4 bg-slate-100 rounded-sm shadow-md group hover:shadow-lg">
+                    <img alt="Java" class="w-12 h-12 mb-4 transition-transform duration-200 group-hover:scale-125" src="./static/asserts/java.png">
+                    <span class="text-center text-gray-700">Java</span>
+                </div>
+            </div>
+            <div class="col">
+                <div
+                        class="d-flex flex-column align-items-center p-4 bg-slate-100 rounded-sm shadow-md group hover:shadow-lg">
+                    <img alt="springboot" class="w-12 h-12 mb-4 transition-transform duration-200 group-hover:scale-125" src="./static/asserts/springboot.png">
+                    <span class="text-center text-gray-700">Springboot</span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="d-flex flex-column align-items-center p-4 bg-slate-100 rounded-sm shadow-md group hover:shadow-lg">
+                    <img alt="csharp" class="w-12 h-12 mb-4 transition-transform duration-200 group-hover:scale-125" src="./static/asserts/csharp.png">
+                    <span class="text-center text-gray-700">C Sharp</span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="d-flex flex-column align-items-center p-4 bg-slate-100 rounded-sm shadow-md group hover:shadow-lg">
+                    <img alt="react" class="w-12 h-12 mb-4 transition-transform duration-200 group-hover:scale-125" src="./static/asserts/react.png"/>
+                    <span class="text-center text-gray-700">React</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="./js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 </body>
 </html>

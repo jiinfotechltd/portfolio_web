@@ -22,15 +22,41 @@ body {
 }
 
 .hover-effect:hover {
-    color: rgb(228, 181, 8) !important;
+    color: rgb(255, 160, 10) !important;
  }
 
 .active{
-  color: rgb(235, 191, 29) !important;
+  color: rgb(255, 160, 10) !important;
 }
 
-span{
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+.custom-hover-effect:hover .flex {
+    border-color: #b0b0b0;
+    transform: scale(1.02);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.service-box {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+
+}
+
+.service-box .circle {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: rgb(255, 180, 10);
+    border-radius: 60%;
+    pointer-events: none;
+    opacity: 0.7;
+    filter: blur(50px);
+    transition: all 0.2s ease-out;
+    display: none;
+
+}
+.span-color {
+    color: rgb(255, 180, 10);
 }
 
 .footer {
