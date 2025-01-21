@@ -33,3 +33,18 @@ span{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+.footer {
+  text-align:center;
+ }
+.footer .bg-sec h2 {
+  color:#FFFFFF;
+  font-size:25px;
+  font-weight:normal;
+ }
+.list-inline-item a:hover i {
+   color: #007bff;
+   transition: color 0.3s ease;
+}
+#contact span {
+   color: rgb(255, 180, 10);
+}
