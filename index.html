@@ -7,95 +7,87 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link href="./css/style.css" rel="stylesheet">
 </head>
 <body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="100">
-<nav class="fixed top-0 left-0 w-full z-50 pt-10 px-5 py-5">
-    <div class="container mx-auto flex items-center justify-between px-4 h-16">
-        <a href="#menu" class="navbar-brand ">
-            <img src="./static/asserts/logo.png" alt="Logo" class="h-25 w-25"/>
-        </a>
-        <button class="block md:hidden text-white focus:outline-none" type="button" onclick="document.getElementById('navbarNav').classList.toggle('hidden')">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-            </svg>
-        </button>
-        <div id="navbarNav" class="hidden md:flex space-x-6">
-            <a href="#menu" class="text-white text-lg hover-effect active">Home</a>
-            <a href="./Pages/AboutUs.html" class="text-white text-lg text-dark hover-effect">About</a>
-            <a href="#service" class="text-white text-lg hover-effect">Services</a>
-            <a href="#features" class="text-white text-lg hover-effect">Features</a>
-            <a href="#portfolio" class="text-white text-lg hover-effect">Portfolio</a>
-            <a href="#contact" class="text-white text-lg hover-effect">Contact</a>
+<nav id="navbar" class="fixed d-flex flex-column  top-0 h-16 left-0 w-full z-50 bg-transparent text-white transition-colors duration-300">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+            <img src="./static/asserts/JI%20logo2.png" alt="Logo" class="h-10 w-10 object-cover">
+            <span class="text-2xl font-bold">JI-InfoTech</span>
         </div>
+        <ul class="flex space-x-6">
+            <li><a href="" class="text-white hover-effect font-semibold active nav-link">Home</a></li>
+            <li><a href="#about" class="text-white hover-effect font-semibold nav-link">About</a></li>
+            <li><a href="#service" class="text-white hover-effect font-semibold nav-link">Services</a></li>
+            <li><a href="#contact" class="text-white hover-effect font-semibold nav-link">Contact</a></li>
+        </ul>
     </div>
 </nav>
-<section id="slider">
-    <div id="homeCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active bg-cover bg-center h-100">
-                <img src="./static/asserts/carousel_1.png" class="h-100 w-100"/>
-                <div class="container-fluid h-100 p-0">
-                    <div class="row h-100 m-0">
-                        <div class="col-md-6 carousel-caption d-flex flex-column align-items-start justify-content-center h-100 text-start">
-                            <h1 class="display-4 text-white">We Are <span>JI-InfoTech</span></h1>
-                            <h2 class="text-white">Innovating Your Digital Future.</h2>
-                            <p class="text-white">At the intersection of creativity and technology, we craft scalable, secure, and high-performance software solutions that help businesses unlock their full potential and achieve their most ambitious goals.</p>
-                        </div>
-                    </div>
-                </div>
+<div  class="relative w-full h-screen">
+    <video src="./static/asserts/Back-Video.mp4" class="w-full h-full object-cover" autoplay muted playsinline loop></video>
+    <div class="absolute inset-0 bg-[rgba(9,30,62,0.7)] z-15 flex flex-col items-center justify-center">
+        <div id="main-content" class="p-6 text-center max-w-xl mx-auto">
+            <h5 class="text-white mb-3 text-lg sm:text-xl">We are</h5>
+            <h5 class="text-white uppercase mb-3 text-3xl sm:text-4xl lg:text-5xl mb-4" data-animate="animate-slideInRight">
+                <span class="span-color">Just</span> Innovation
+            </h5>
+            <h1 class="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4" data-animate="animate-zoomIn">
+                Empowering Innovation, Simplifying Solutions
+            </h1>
+            <p class="text-white text-sm sm:text-base md:text-lg animate__ZoomIn">
+                Transforming your business with cutting-edge software solutions that drive innovation, efficiency, and growth.
+            </p>
+        </div>
+    </div>
+</div>
+<section id="about" class="py-16 bg-gray-90">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-semibold text-dark" data-animate="animate-slideInLeft">
+                ABOUT <span class="span-color">US</span>
+            </h2>
+            <div class="border-t-2 border-dark w-24 mx-auto mt-4" data-animate="animate-slideInRight"></div>
+            <p class=" text-lg mt-4">
+                <span class="span-color">E</span>mpowering businesses with innovative software solutions for a smarter future.
+            </p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+                <h3 class="text-2xl font-bold mb-6 text-dark">
+                    We Are Creative And Awesome
+                </h3>
+                <p class="mb-4 text-gray-600">
+                    Welcome to <strong class="span-color">JI-InfoTech</strong>, where innovation meets excellence. Established in
+                    2025, we are dedicated to delivering top-tier solutions tailored to meet the diverse needs of our clients.
+                </p>
+                <p class="mb-4 text-gray-600 leading-relaxed">
+                    we are dedicated to delivering cutting-edge software solutions that empower businesses to thrive in an ever-evolving digital landscape. With a passion for innovation and a commitment to excellence, our team specializes in crafting customized applications, streamlining operations,
+                    and driving measurable growth. Founded on the principles of quality and trust, we partner with clients to turn their vision into reality through robust and scalable technology. Our expertise spans diverse industries, enabling us to understand unique challenges and deliver tailored results. At Ji-InfoTech, we don’t just build software—we create transformative experiences that pave the way for future success.
+                </p>
+                <a href="#" class=" btn btn-primary bg-red-500 text-white py-2 rounded-md hover:bg-red-600">Learn More</a>
             </div>
-            <div class="carousel-item ">
-                <img src="./static/asserts/carousel_2.png" class="h-100 w-100"/>
-                <div class="container h-100 p-0">
-                    <div class="row h-100 m-0">
-                        <div class="col-md-6 carousel-caption d-flex flex-column align-items-start justify-content-center h-100 text-start">
-                            <h1 class="display-3 text-white">We Are <span >JI-InfoTech</span></h1>
-                            <h2 class="text-white">Where Ideas Meet Innovation.</h2>
-                            <p class="text-white">With a passion for excellence and a focus on cutting-edge technology, we deliver custom software solutions that empower businesses to solve complex challenges and stay ahead in a rapidly evolving market.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="./static/asserts/carousel_3.png" class="h-100 w-100"/>
-                <div class="container h-100 p-0">
-                    <div class="row h-100 m-0">
-                        <div class="col-md-6 carousel-caption d-flex flex-column align-items-start justify-content-center h-100 text-start">
-                            <h1 class="display-3 text-white">We Are <span>JI-InfoTech</span></h1>
-                            <h2 class="text-white">Transforming Ideas into Digital Solutions.</h2>
-                            <p class="text-white">We harness the power of technology to create innovative solutions that help businesses streamline their operations, enhance customer experiences, and drive sustainable growth in the digital age</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="text-center">
+                <img src="https://cdn.pixabay.com/photo/2020/01/26/20/14/computer-4795762_640.jpg" alt="About Us Image" class="img-fluid rounded-lg shadow-lg mx-auto">
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#homeCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#homeCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
     </div>
 </section>
 <section id="service" class="py-16 pb-20 pl-6 pr-6">
     <div class="container">
         <div class="mx-auto text-center mb-12">
             <div class="heading">
-                <h2 class="text-3xl font-semibold">OUR SERVI<span class="span-color">CE</span></h2>
-                <div class="border-t-2 border-dark w-24 mx-auto mt-4"></div>
+                <h2 class="text-3xl font-semibold" data-animate="animate-slideInRight" >OUR SERVI<span class="span-color">CE</span></h2>
+                <div class="border-t-2 border-dark w-24 mx-auto mt-4" data-animate="animate-slideInLeft"></div>
                 <p class="text-lg mt-4"><span class="span-color">D</span>elivering Innovative Software Solutions Tailored to Drive Your Business Success</p>
             </div>
         </div>
         <div class="row grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            <div class="service-box wow fadeInUp custom-hover-effect group p-0" data-wow-duration="300ms" data-wow-delay="0ms">
-                <div class="flex flex-col h-auto min-w-full p-5 lg:p-8 border border-gray-300 rounded-2xl items-center relative p-0">
-                    <div class="mr-4 text-4xl text-primary">
-                        <i class="fa fa-line-chart"></i>
-                    </div>
+            <div class="service-box wow fadeInUp custom-hover-effect group p-0" data-animate="animate-slideInLeft" data-wow-duration="300ms" data-wow-delay="0ms">
+                <div class="flex flex-col h-auto min-w-full p-5 lg:p-8 border border-gray-300 items-center relative p-0">
                     <div class="media-body text-center">
                         <h5 class="font-semibold text-2xl mb-3 group-hover:mb-1 transition-all group-hover:scale-100 group-hover:translate-y-[-10px] transition-all duration-500 group-hover:text-xl">UI/UX Design</h5>
                         <p class="description text-center mb-0 max-h-0 group-hover:opacity-100 group-hover:max-h-[100px] transition-all duration-500 ease-in-out overflow-hidden">Backed by some of the biggest names in the industry, Firefox OS is an open platform that fosters greater.</p>
@@ -103,40 +95,29 @@
                 </div>
                 <div class="circle"></div>
             </div>
-            <div class="service-box wow fadeInUp custom-hover-effect group p-0" data-wow-duration="300ms"
+            <div class="service-box wow fadeInUp custom-hover-effect group p-0 " data-animate="animate-slideInDown" data-wow-duration="300ms"
                  data-wow-delay="0ms">
-                <div class="flex flex-col h-auto min-w-full p-5 lg:p-8 border border-gray-300 rounded-2xl items-center relative">
-                    <div class="mr-4 text-4xl text-primary">
-                        <i class="fa fa-line-chart"></i>
-                    </div>
+                <div class="flex flex-col h-auto min-w-full p-5 lg:p-8 border border-gray-300 items-center relative">
                     <div class="media-body text-center">
-                        <h5 class="font-semibold text-2xl mb-3 group-hover:mb-1 transition-all group-hover:scale-100 group-hover:translate-y-[-10px] transition-all duration-500 group-hover:text-xl">
-                            ERP software development</h5>
+                        <h5 class="font-semibold text-2xl mb-3 group-hover:mb-1 transition-all group-hover:scale-100 group-hover:translate-y-[-10px] transition-all duration-500 group-hover:text-xl">ERP Development</h5>
                         <p class="description text-center mb-0 max-h-0 group-hover:opacity-100 group-hover:max-h-[100px] transition-all duration-500 ease-in-out overflow-hidden">Backed by some of the biggest names in the industry, Firefox OS is an open platform that fosters greater.</p>
                     </div>
                 </div>
                 <div class="circle"></div>
             </div>
-            <div class="service-box wow fadeInUp custom-hover-effect group p-0" data-wow-duration="300ms"
+            <div class="service-box wow fadeInUp custom-hover-effect group p-0" data-animate="animate-slideInRight" data-wow-duration="300ms"
                  data-wow-delay="0ms">
-                <div class="flex flex-col h-auto min-w-full p-5 lg:p-8 border border-gray-300 rounded-2xl items-center relative">
-                    <div class="mr-4 text-4xl text-primary">
-                        <i class="fa fa-line-chart"></i>
-                    </div>
+                <div class="flex flex-col h-auto min-w-full p-5 lg:p-8 border border-gray-300 items-center relative ">
                     <div class="media-body text-center">
-                        <h5 class="font-semibold text-2xl mb-3 group-hover:mb-1 transition-all group-hover:scale-100 group-hover:translate-y-[-10px] transition-all duration-500 group-hover:text-xl">
-                            Web Development</h5>
+                        <h5 class="font-semibold text-2xl mb-3 group-hover:mb-1 transition-all group-hover:scale-100 group-hover:translate-y-[-10px] transition-all duration-500 group-hover:text-xl">Web Development</h5>
                         <p class="description text-center mb-0 max-h-0 group-hover:opacity-100 group-hover:max-h-[100px] transition-all duration-500 ease-in-out overflow-hidden">Backed by some of the biggest names in the industry, Firefox OS is an open platform that fosters greater.</p>
                     </div>
                 </div>
                 <div class="circle"></div>
             </div>
-            <div class="service-box wow fadeInUp custom-hover-effect group p-0" data-wow-duration="300ms"
+            <div class="service-box wow fadeInUp custom-hover-effect group p-0 " data-animate="animate-slideInLeft" data-wow-duration="300ms"
                  data-wow-delay="0ms">
-                <div class="flex flex-col h-auto min-w-full p-5 lg:p-8 border border-gray-300 rounded-2xl items-center relative">
-                    <div class="mr-4 text-4xl text-primary">
-                        <i class="fa fa-line-chart"></i>
-                    </div>
+                <div class="flex flex-col h-auto min-w-full p-5 lg:p-8 border border-gray-300 items-center relative">
                     <div class="media-body text-center">
                         <h5 class="font-semibold text-2xl mb-3 group-hover:mb-1 transition-all group-hover:scale-100 group-hover:translate-y-[-10px] transition-all duration-500 group-hover:text-xl">Android Development</h5>
                         <p class="description text-center mb-0 max-h-0 group-hover:opacity-100 group-hover:max-h-[100px] transition-all duration-500 ease-in-out overflow-hidden">Backed by some of the biggest names in the industry, Firefox OS is an open platform that fosters greater.</p>
@@ -144,12 +125,9 @@
                 </div>
                 <div class="circle"></div>
             </div>
-            <div class="service-box wow fadeInUp custom-hover-effect group p-0" data-wow-duration="300ms"
+            <div class="service-box wow fadeInUp custom-hover-effect group p-0 " data-animate="animate-slideInDown" data-wow-duration="300ms"
                  data-wow-delay="0ms">
-                <div class="flex flex-col h-auto min-w-full p-5 lg:p-8 border border-gray-300 rounded-2xl items-center relative">
-                    <div class="mr-4 text-4xl text-primary">
-                        <i class="fa fa-line-chart"></i>
-                    </div>
+                <div class="flex flex-col h-auto min-w-full p-5 lg:p-8 border border-gray-300 items-center relative">
                     <div class="media-body text-center">
                         <h5 class="font-semibold text-2xl mb-3 group-hover:mb-1 transition-all group-hover:scale-100 group-hover:translate-y-[-10px] transition-all duration-500 group-hover:text-xl">React App</h5>
                         <p class="description text-center mb-0 max-h-0 group-hover:opacity-100 group-hover:max-h-[100px] transition-all duration-500 ease-in-out overflow-hidden">Backed by some of the biggest names in the industry, Firefox OS is an open platform that fosters greater.</p>
@@ -157,12 +135,8 @@
                 </div>
                 <div class="circle"></div>
             </div>
-            <div class="service-box wow fadeInUp custom-hover-effect group p-0" data-wow-duration="300ms"
-                 data-wow-delay="0ms">
-                <div class="flex flex-col h-auto min-w-full p-5 lg:p-8 border border-gray-300 rounded-2xl items-center relative">
-                    <div class="mr-4 text-4xl text-primary">
-                        <i class="fa fa-line-chart"></i>
-                    </div>
+            <div class="service-box wow fadeInUp custom-hover-effect group p-0" data-animate="animate-slideInRight" data-wow-duration="300ms" data-wow-delay="0ms">
+                <div class="flex flex-col h-auto min-w-full p-5 lg:p-8 border border-gray-300 items-center relative">
                     <div class="media-body text-center">
                         <h5 class="font-semibold text-2xl mb-3 group-hover:mb-1 transition-all group-hover:scale-100 group-hover:translate-y-[-10px] transition-all duration-500 group-hover:text-xl">SEO Design</h5>
                         <p class="description text-center mb-0 max-h-0 group-hover:opacity-100 group-hover:max-h-[100px] transition-all duration-500 ease-in-out overflow-hidden">Backed by some of the biggest names in the industry, Firefox OS is an open platform that fosters greater.</p>
@@ -173,61 +147,181 @@
         </div>
     </div>
 </section>
-
 <div class="mx-auto text-center pl-6 pr-6 pb-12">
     <div class="heading">
-        <h2 class="text-3xl font-semibold"><span class="span-color">We</span> working on</h2>
-        <div class="border-t-2 border-dark w-24 mx-auto mt-4"></div>
+        <h2 class="text-3xl font-semibold " data-animate="animate-slideInLeft"><span class="span-color">We</span> working on</h2>
+        <div class="border-t-2 border-dark w-24 mx-auto mt-4" data-animate="animate-slideInRight"></div>
     </div>
 </div>
-<div data-state="active" data-orientation="horizontal" role="tabpanel" aria-labelledby="radix-:ri: -trigger-Front-End" id="radix-:ri:-content-Front-End" tabindex="0"
-     class="mt-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 pb-12 pl-6 pr-6">
+<div data-state="active" data-orientation="horizontal" role="tabpanel" aria-labelledby="radix-:ri: -trigger-Front-End" id="radix-:ri:-content-Front-End" tabindex="0" class="mt-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 pb-12 pl-6 pr-6">
     <div class="container pt-6">
         <div class="row row-cols-2 row-cols-sm-3 row-cols-lg-6 g-4">
             <div class="col">
-                <div class="d-flex flex-column align-items-center p-4 bg-slate-100 rounded-sm shadow-md group hover:shadow-lg">
+                <div class="d-flex flex-column align-items-center p-4 bg-slate-100 rounded-sm shadow-md group hover:shadow-lg" data-animate="animate-slideInDown">
                     <img alt="HTML5" class="w-12 h-12 mb-4 transition-transform duration-200 group-hover:scale-125 " src="./static/asserts/html.png"/>
                     <span class="text-center text-gray-700">HTML</span>
                 </div>
             </div>
             <div class="col">
-                <div class="d-flex flex-column align-items-center p-4 bg-slate-100 rounded-sm shadow-md group hover:shadow-lg">
-                    <img alt="CSS3" class="w-12 h-12 mb-4 transition-transform duration-200 group-hover:scale-125"
-                         src="./static/asserts/css.png">
+                <div class="d-flex flex-column align-items-center p-4 bg-slate-100 rounded-sm shadow-md group hover:shadow-lg" data-animate="animate-slideInDown">
+                    <img alt="CSS3" class="w-12 h-12 mb-4 transition-transform duration-200 group-hover:scale-125" src="./static/asserts/css.png">
                     <span class="text-center text-gray-700">CSS3</span>
                 </div>
             </div>
             <div class="col">
-                <div class="d-flex flex-column align-items-center p-4 bg-slate-100 rounded-sm shadow-md group hover:shadow-lg">
-                    <img alt="Java" class="w-12 h-12 mb-4 transition-transform duration-200 group-hover:scale-125" src="./static/asserts/java.png">
-                    <span class="text-center text-gray-700">Java</span>
+                <div class="d-flex flex-column align-items-center p-4 bg-slate-100 rounded-sm shadow-md group hover:shadow-lg" data-animate="animate-slideInDown">
+                    <img alt="Javascript" class="w-12 h-12 mb-4 transition-transform duration-200 group-hover:scale-125" src="./static/asserts/javascript.png">
+                    <span class="text-center text-gray-700">JavaScript</span>
                 </div>
             </div>
             <div class="col">
-                <div
-                        class="d-flex flex-column align-items-center p-4 bg-slate-100 rounded-sm shadow-md group hover:shadow-lg">
+                <div class="d-flex flex-column align-items-center p-4 bg-slate-100 rounded-sm shadow-md group hover:shadow-lg" data-animate="animate-slideInDown">
+                    <img alt="bootstrap" class="w-20 h-12 mb-4 transition-transform duration-200 group-hover:scale-125" src="./static/asserts/bootstrap.png">
+                    <span class="text-center text-gray-700">Bootstrap</span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="d-flex flex-column align-items-center p-4 bg-slate-100 rounded-sm shadow-md group hover:shadow-lg" data-animate="animate-slideInDown">
                     <img alt="springboot" class="w-12 h-12 mb-4 transition-transform duration-200 group-hover:scale-125" src="./static/asserts/springboot.png">
                     <span class="text-center text-gray-700">Springboot</span>
                 </div>
             </div>
             <div class="col">
-                <div class="d-flex flex-column align-items-center p-4 bg-slate-100 rounded-sm shadow-md group hover:shadow-lg">
-                    <img alt="csharp" class="w-12 h-12 mb-4 transition-transform duration-200 group-hover:scale-125" src="./static/asserts/csharp.png">
+                <div class="d-flex flex-column align-items-center p-4 bg-slate-100 rounded-sm shadow-md group hover:shadow-lg" data-animate="animate-slideInDown">
+                    <img alt="react" class="w-12 h-12 mb-4 transition-transform duration-200 group-hover:scale-125" src="./static/asserts/react.png"/>
+                    <span class="text-center text-gray-700">React</span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="d-flex flex-column align-items-center p-4 bg-slate-100 rounded-sm shadow-md group hover:shadow-lg" data-animate="animate-slideInDown">
+                    <img alt="Java" class="w-12 h-12 mb-4 transition-transform duration-200 group-hover:scale-125" src="./static/asserts/java.png">
+                    <span class="text-center text-gray-700">Java</span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="d-flex flex-column align-items-center p-4 bg-slate-100 rounded-sm shadow-md group hover:shadow-lg" data-animate="animate-slideInDown">
+                    <img alt="c sharp" class="w-12 h-12 mb-4 transition-transform duration-200 group-hover:scale-125" src="./static/asserts/csharp.png">
                     <span class="text-center text-gray-700">C Sharp</span>
                 </div>
             </div>
             <div class="col">
-                <div class="d-flex flex-column align-items-center p-4 bg-slate-100 rounded-sm shadow-md group hover:shadow-lg">
-                    <img alt="react" class="w-12 h-12 mb-4 transition-transform duration-200 group-hover:scale-125" src="./static/asserts/react.png"/>
-                    <span class="text-center text-gray-700">React</span>
+                <div class="d-flex flex-column align-items-center p-4 bg-slate-100 rounded-sm shadow-md group hover:shadow-lg" data-animate="animate-slideInDown">
+                    <img alt="scala" class="w-12 h-12 mb-4 transition-transform duration-200 group-hover:scale-125" src="./static/asserts/scala.png">
+                    <span class="text-center text-gray-700">Scala</span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="d-flex flex-column align-items-center p-4 bg-slate-100 rounded-sm shadow-md group hover:shadow-lg" data-animate="animate-slideInDown">
+                    <img alt="microservice" class="w-12 h-12 mb-4 transition-transform duration-200 group-hover:scale-125" src="./static/asserts/microservice.png">
+                    <span class="text-center text-gray-700">Microservice</span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="d-flex flex-column align-items-center p-4 bg-slate-100 rounded-sm shadow-md group hover:shadow-lg" data-animate="animate-slideInDown">
+                    <img alt="thymleaf" class="w-12 h-12 mb-4 transition-transform duration-200 group-hover:scale-125" src="./static/asserts/thymeleaf.png">
+                    <span class="text-center text-gray-700">Thymleaf</span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="d-flex flex-column align-items-center p-4 bg-slate-100 rounded-sm shadow-md group hover:shadow-lg" data-animate="animate-slideInDown">
+                    <img alt="testing" class="w-15 h-12 mb-4 transition-transform duration-200 group-hover:scale-125" src="https://img.favpng.com/11/24/25/software-testing-logo-web-browser-behavior-driven-development-png-favpng-9W23TEdq5UAFiJ1zKjEY4heqH.jpg">
+                    <span class="text-center text-gray-700">Testing</span>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<div class="heading">
+    <h2 class="text-3xl font-semibold text-center" data-animate="animate-slideInRight" ><span class="span-color">OU</span>R CLIENTS</h2>
+    <div class="border-t-2 border-dark w-24 mx-auto mt-4" data-animate="animate-slideInLeft"></div>
+    <p class="text-lg mt-4 text-center"><span class="span-color">W</span>e are proud to collaborate with these amazing organizations</p>
+</div>
+<div class="container mx-auto my-8">
+    <div class="relative bg-white shadow-md rounded-lg p-4 overflow-hidden">
+        <div class="overflow-hidden w-full">
+            <div class="flex animate-[scroll_20s_linear_infinite] whitespace-nowrap animate-[scroll_20s_linear_infinite] flex">
+                <div class="flex-shrink-0 w-1/2 sm:w-auto mx-auto my-2">
+                    <img src="./static/asserts/Clientlogo1.png" alt="Client 1" class="max-w-[120px] max-h-[100px]">
+                </div>
+                <div class="flex-shrink-0 w-1/2 sm:w-auto mx-auto my-2">
+                    <img src="./static/asserts/Clientlogo2.png" alt="Client 2" class="max-w-[120px] max-h-[100px]">
+                </div>
+                <div class="flex-shrink-0 w-1/2 sm:w-auto mx-auto my-2">
+                    <img src="./static/asserts/Clientlogo3.png" alt="Client 3" class="max-w-[120px] max-h-[100px]">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<section id="contact" class="py-10">
+    <div class="container mx-auto">
+        <div class="text-center mb-10">
+            <h2 class="text-3xl font-semibold text-dark" data-animate="animate-slideInLeft">CONTACT <span class="span-color">US</span></h2>
+            <div class="border-t-2 border-dark w-24 mx-auto mt-4" data-animate="animate-slideInRight"></div>
+            <p class="mt-2 text-lg text-dark">
+                <span class="font-semibold">JI-</span>InfoTech provides innovative, excellence, and unparalleled customer service.
+            </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="text-center">
+                <h4 class="text-xl font-semibold text-gray-800">Contact Info</h4>
+                <ul class="mt-3 space-y-2">
+                    <li class="flex items-center justify-center">
+                        <i class="fa fa-map-marker text-dark text-xl mr-4"></i>
+                        <h6 class="text-gray-600">Address: Viman Nagar, Pune</h6>
+                    </li>
+                    <li class="flex items-center justify-center">
+                        <i class="fa fa-envelope text-dark text-xl mr-4"></i>
+                        <h6 class="text-gray-600">Mail Us:
+                            <a href="mailto:jiinfotechltd@gmail.com" class="underline">jiinfotechltd@gmail.com</a>
+                        </h6>
+                    </li>
+                    <li class="flex items-center justify-center">
+                        <i class="fa fa-phone text-dark text-xl mr-4"></i>
+                        <h6 class="text-gray-600">Phone: +91 123-456-7890</h6>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <form action="https://formspree.io/f/movvgjnz" method="POST" class="space-y-4">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <input type="text" name="name" class="w-full px-4 py-2 border rounded-md focus:ring focus:ring-red-300" placeholder="Name" required>
+                        <input type="email" name="email" class="w-full px-4 py-2 border rounded-md focus:ring focus:ring-red-300" placeholder="Email Address" required>
+                    </div>
+                    <input type="text" name="subject" class="w-full px-4 py-2 border rounded-md focus:ring focus:ring-red-300" placeholder="Subject" required>
+                    <textarea name="message" class="w-full px-4 py-2 border rounded-md focus:ring focus:ring-red-300" rows="4" placeholder="Enter your message" required></textarea>
+                    <button type="submit" class="w-full bg-red-500 text-white py-2 rounded-md hover:bg-red-600">Send Now</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="bg-gray-800 text-white py-6">
+    <div class="container mx-auto text-center">
+        <h2 class="text-lg font-semibold mb-4 fs-3">Follow On Us</h2>
+        <div class="flex justify-center space-x-4 mb-6">
+            <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-3">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="bg-blue-400 hover:bg-blue-500 text-white rounded-full p-3">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="bg-pink-500 hover:bg-pink-600 text-white rounded-full p-3">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="bg-blue-800 hover:bg-blue-900 text-white rounded-full p-3">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </div>
+        <p class="text-sm">&copy; 2025 JI-InfoTech. All Rights Reserved.</p>
+    </div>
+</footer>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="./js/script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+<script>
+</script>
 </body>
 </html>
