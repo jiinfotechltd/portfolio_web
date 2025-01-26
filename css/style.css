@@ -1,24 +1,10 @@
 body {
-  font-family: "Poppins", serif;
+  font-family: "Poppins";
 }
 
 .highlight {
     color: #007bff;
     font-weight: bold;
-}
-
-.text-ct1{
-    color: #007bff !important;
-}
-
-.text-ct2{
-    color: #ff8c00 !important;
-}
-
-.carousel-caption h1,
-.carousel-caption h2,
-.carousel-caption p {
-  animation: fadeIn 1s ease-in-out;
 }
 
 .hover-effect:hover {
@@ -46,7 +32,7 @@ body {
     position: absolute;
     width: 150px;
     height: 150px;
-    background-color: rgb(255, 180, 10);
+    background-color: rgb(255, 160, 10);
     border-radius: 60%;
     pointer-events: none;
     opacity: 0.7;
@@ -56,21 +42,149 @@ body {
 
 }
 .span-color {
-    color: rgb(255, 180, 10);
+    color: rgb(255, 160, 10);
+}
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
-.footer {
-  text-align:center;
- }
-.footer .bg-sec h2 {
-  color:#FFFFFF;
-  font-size:25px;
-  font-weight:normal;
- }
-.list-inline-item a:hover i {
-   color: #007bff;
-   transition: color 0.3s ease;
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
-#contact span {
-   color: rgb(255, 180, 10);
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes zoomIn {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@keyframes zoomOut {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+    to {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+.animate-zoomOut {
+    animation: zoomOut 1s ease-in-out;
+}
+
+
+.animate-zoomIn {
+    animation: zoomIn 1s ease-in-out;
+}
+
+
+.animate-slideInDown {
+    animation: slideInDown 1s ease-in-out;
+}
+
+
+.animate-slideInUp {
+    animation: slideInUp 1s ease-in-out;
+}
+
+.animate-slideInLeft {
+    animation: slideInLeft 1s ease-in-out;
+}
+
+.animate-slideInRight {
+    animation: slideInRight 1s ease-in-out;
+}
+
+
+.animate-slideInLeft {
+    animation: slideInLeft 1s ease-in-out;
+}
+
+@keyframes scroll {
+0% {
+transform: translateX(0);
+}
+100% {
+transform: translateX(-50%);
+}
+}
+.scroll-wrapper {
+display: flex;
+width: 200%;
+}
+@keyframes slideIn {
+0% {
+    transform: translateY(100%);
+    opacity: 0;
+}
+100% {
+    transform: translateY(0);
+    opacity: 1;
+}
+}
+
+@keyframes slideOut {
+0% {
+    transform: translateY(0);
+    opacity: 1;
+}
+100% {
+    transform: translateY(100%);
+    opacity: 0;
+}
+}
+.dropdown-show {
+animation: slideIn 0.3s ease-in-out forwards;
+}
+
+.dropdown-hide {
+animation: slideOut 0.3s ease-in-out forwards;
+}
+#menu-toggle:checked ~ #dropdown {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+#menu-toggle:checked ~ #dropdown ~ #main-content {
+    margin-top: 200px;
 }
